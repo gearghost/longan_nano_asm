@@ -10,7 +10,7 @@ risc-v assembly test code for longan nano board
 ### 编译方法，在交叉编译工具链和环境准备好之后
 
 ```bash
-make
+make all
 ```
 
 #### `生成的文件都在target目录下`, 包括编译生成中间文件.o，链接后生成的.elf文件，剥离elf头之后的二进制文件.bin（用于下载到板子上），还有输出的elf header结构文件.header，用于分析内存结构是否对应的上。
