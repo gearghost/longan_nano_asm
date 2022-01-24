@@ -11,14 +11,19 @@
 .section .rodata
 
 _red: .asciz "red light on\r\n"
+.align    2
 
 _green: .asciz "green light on\r\n"
+.align    2
 
 _blue: .asciz "blue light on\r\n"
+.align    2
 
 _purple: .asciz "purple light on\r\n"
+.align    2
 
 _yellow: .asciz "yellow light on\r\n"
+.align    2
 
 .section .init
 	
@@ -177,9 +182,8 @@ vector_base:
 	.word     CAN1_EWMC_IRQHandler
 	.word     USBFS_IRQHandler
 
-	.globl _start
-	.type _start,@function
-
+.globl _start
+.type _start,@function
 _start:
 
 		csrc CSR_MSTATUS, MSTATUS_MIE
@@ -195,7 +199,6 @@ _start:
 		jr    a0
 
 .section .text
-
 _start0800:
 
     /* Set the the NMI base to share with mtvec by setting CSR_MMISC_CTL */
